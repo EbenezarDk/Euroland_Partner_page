@@ -71,8 +71,11 @@ export function SiteHeader({
             aria-label="Euroland IR home"
             onClick={(event) => {
               event.preventDefault()
-              if (location.hash !== '#hero') {
-                window.location.hash = 'hero'
+              const targetHash = homeHref.startsWith('#')
+                ? homeHref.slice(1)
+                : 'partner-hero'
+              if (location.hash !== `#${targetHash}`) {
+                window.location.hash = targetHash
               }
               window.scrollTo({ top: 0, behavior: 'smooth' })
               window.dispatchEvent(new Event('scroll'))
@@ -178,8 +181,11 @@ export function SiteHeader({
       >
         <nav className="hero__mobile-nav" aria-label="Primary">
           {NAV_ITEMS.map((item) => {
-            const active = currentPath === item.match
             const hash = 'hash' in item ? item.hash : undefined
+            const currentHash = location.hash.replace(/^#/, '') || 'partner-hero'
+            const active = hash
+              ? currentHash === hash
+              : currentPath === item.match || currentHash === item.match
 
             return (
               <Link
@@ -187,7 +193,7 @@ export function SiteHeader({
                 className={`hero__mobile-link${active ? ' hero__mobile-link--active' : ''}`}
                 to={hash ? { pathname: item.to, hash } : item.to}
                 onClick={() => {
-                  if (hash === 'hero' && window.location.pathname === item.to) {
+                  if (hash === 'partner-hero' && window.location.pathname === item.to) {
                     window.scrollTo({ top: 0, behavior: 'smooth' })
                     window.dispatchEvent(new Event('scroll'))
                   }

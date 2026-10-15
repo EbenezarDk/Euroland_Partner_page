@@ -1,16 +1,24 @@
 export const NAV_ITEMS = [
-  { label: 'About Us', to: '/', hash: 'hero', match: '/' },
-  { label: 'Share Graph', to: '/share-graph', match: '/share-graph' },
+  { label: 'Overview', to: '/', hash: 'partner-hero', match: 'partner-hero' },
   {
-    label: 'Interactive Analysis Tool',
-    to: '/interactive-analysis-tool',
-    match: '/interactive-analysis-tool',
+    label: 'Partner types',
+    to: '/',
+    hash: 'partner-categories',
+    match: 'partner-categories',
   },
   {
-    label: 'Artificial Intelligence',
-    to: '/artificial-intelligence',
-    match: '/artificial-intelligence',
+    label: 'How it works',
+    to: '/',
+    hash: 'partner-process',
+    match: 'partner-process',
   },
+  {
+    label: 'Contact',
+    to: '/',
+    hash: 'partner-enquiry',
+    match: 'partner-enquiry',
+  },
+  { label: 'FAQs', to: '/', hash: 'faqs', match: 'faqs' },
 ] as const
 
 export type NavItem = (typeof NAV_ITEMS)[number]

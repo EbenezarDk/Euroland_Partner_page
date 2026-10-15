@@ -1,5 +1,4 @@
 import type { RefObject } from 'react'
-import { Link } from 'react-router-dom'
 
 type FooterProps = {
   sectionRef: RefObject<HTMLElement | null>
@@ -23,6 +22,13 @@ const SOCIAL = [
   },
 ] as const
 
+const FOOTER_LINKS = [
+  { label: 'Partner types', href: '#partner-categories' },
+  { label: 'How it works', href: '#partner-process' },
+  { label: 'Enquiry', href: '#partner-enquiry' },
+  { label: 'FAQs', href: '#faqs' },
+] as const
+
 export function Footer({ sectionRef }: FooterProps) {
   return (
     <footer className="footer" ref={sectionRef}>
@@ -36,9 +42,11 @@ export function Footer({ sectionRef }: FooterProps) {
             height={38}
           />
           <nav className="footer__nav" aria-label="Footer">
-            <Link to="/share-graph">Share Graph</Link>
-            <Link to="/interactive-analysis-tool">Interactive Analysis Tool</Link>
-            <Link to="/artificial-intelligence">Artificial Intelligence</Link>
+            {FOOTER_LINKS.map((item) => (
+              <a key={item.href} href={item.href}>
+                {item.label}
+              </a>
+            ))}
           </nav>
         </div>
 
