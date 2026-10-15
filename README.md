@@ -1,3 +1,3 @@
-# meira_event
+# Euroland Partner Page
 
-Euroland IR Meira landing site.
+Become a Partner page for Euroland IR.
