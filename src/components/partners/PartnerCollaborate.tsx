@@ -7,31 +7,21 @@ export function PartnerCollaborate() {
       id="partner-collaborate"
       aria-labelledby="partner-collaborate-heading"
     >
-      <div className="pc-shell pc-collaborate__layout">
-        <header data-partner-reveal>
-          <p className="pc-caption">Collaboration</p>
+      <div className="pc-shell">
+        <header className="pc-collaborate__header" data-partner-reveal>
           <h2 className="pc-heading" id="partner-collaborate-heading">
-            Where partnerships create value
+            Why Euroland IR?
           </h2>
-          <p className="pc-body">
-            Partnership conversations focus on how organisations contribute to integrated IR
-            delivery — across data, websites, and digital tools.
-          </p>
         </header>
 
-        <ol className="pc-collaborate__list">
-          {PARTNER_COLLABORATIONS.map((item, index) => (
-            <li key={item.id} className="pc-collaborate__item" data-partner-reveal>
-              <span className="pc-collaborate__index" aria-hidden>
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <div>
-                <h3 className="pc-collaborate__title">{item.title}</h3>
-                <p className="pc-body">{item.description}</p>
-              </div>
+        <ul className="pc-collaborate__grid">
+          {PARTNER_COLLABORATIONS.map((item) => (
+            <li key={item.id} className="pc-collaborate__stat" data-partner-reveal>
+              <p className="pc-collaborate__value">{item.value}</p>
+              <p className="pc-collaborate__label">{item.label}</p>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
     </section>
   )

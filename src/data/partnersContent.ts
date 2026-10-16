@@ -56,113 +56,82 @@ export const PARTNER_VALUES = [
 
 export const PARTNER_CATEGORIES = [
   {
-    id: 'data-providers',
-    title: 'Data providers',
-    caption: 'Market & financial data',
+    id: 'expand-offering',
+    title: 'Expand Your Offering',
     description:
-      'Organisations that supply share price, financial, analyst, or ownership data that can be delivered through Euroland IR platforms for listed companies.',
-    image: '/assets/products/share-graph-card.jpg',
-    imageAlt: 'Financial market data visualisation on a laptop',
+      'Add innovative Investor Relations solutions, such as an IR website solution for listed companies, to your existing services.',
   },
   {
-    id: 'distribution',
-    title: 'Distribution networks',
-    caption: 'Reach & distribution',
+    id: 'revenue',
+    title: 'Create New Revenue Opportunities',
     description:
-      'Networks that help distribute investor information and extend the reach of IR communications across markets and audiences.',
-    image: '/assets/products/ai-card.jpg',
-    imageAlt: 'Abstract digital network visualisation',
+      'Grow through flexible partnership models, as a referral partner, IR software reseller or IR software channel partner.',
   },
   {
-    id: 'technology',
-    title: 'Technology vendors',
-    caption: 'Platform & integration',
+    id: 'client-value',
+    title: 'Deliver More Client Value',
     description:
-      'Technology partners whose products and services complement Euroland IR solutions for investor relations websites, tools, and digital engagement.',
-    image: '/assets/products/iat-card.jpg',
-    imageAlt: 'Analytics dashboard with charts and graphs',
+      'Help your clients strengthen investor communication and engagement with a professional investor relations website and IR tools.',
   },
   {
-    id: 'exchanges',
-    title: 'Stock exchanges',
-    caption: 'Capital markets',
+    id: 'grow-confidence',
+    title: 'Grow with Confidence',
     description:
-      'Exchanges and market infrastructure partners supporting listed companies with data and IR communication across global capital markets.',
-    image: '/assets/products/esg-card.jpg',
-    imageAlt: 'Corporate reporting and market overview interface',
+      'Benefit from our technology, training, marketing resources and dedicated support as an investor relations SaaS partner.',
   },
 ] as const
 
 export const PARTNER_COLLABORATIONS = [
   {
-    id: 'data-layer',
-    title: 'Data & market information',
-    description:
-      'Euroland IR sources share price data, key financials, analyst consensus, and ownership analytics from exchanges and regulatory feeds for use across IR platforms, apps, and investor alerts.',
+    id: 'years',
+    value: '40+',
+    label: 'Years of Investor Relations expertise',
   },
   {
-    id: 'ir-websites',
-    title: 'IR websites & disclosure',
-    description:
-      'Partner alongside solutions that help listed companies meet disclosure expectations across 60+ stock exchanges with responsive, accessible investor relations websites.',
+    id: 'clients',
+    value: '1,400+',
+    label: 'Clients worldwide',
   },
   {
-    id: 'digital-ir',
-    title: 'Digital IR tools',
-    description:
-      'Collaborate around Share Graph, Interactive Analysis Tool, and AI-powered investor relations capabilities that help IR teams communicate company information clearly.',
+    id: 'countries',
+    value: '11',
+    label: 'Countries with a local presence',
+  },
+  {
+    id: 'technology',
+    value: 'Award-winning',
+    label: 'IR technology and investor relations software',
+  },
+  {
+    id: 'employees',
+    value: '200+',
+    label: 'Employees with global IR expertise',
+  },
+  {
+    id: 'support',
+    value: '24/7',
+    label: 'Global service and support',
   },
 ] as const
 
 export const PARTNER_PROCESS = [
   {
     step: '01',
-    title: 'Share your enquiry',
+    title: 'Referral Model',
     description:
-      'Tell us about your organisation, the partner category you represent, and how you would like to collaborate. Use the form below or email partners@euroland.com.',
+      'Identify and introduce a qualified opportunity. Receive an agreed referral fee or commission for eligible business.',
   },
   {
     step: '02',
-    title: 'Talk with our team',
+    title: 'Reseller Model',
     description:
-      'A member of the Euroland IR partnership team will review your enquiry and follow up to learn more about the opportunity.',
+      'Through our investor relations reseller program, purchase/resell Euroland solutions under agreed partner commercial terms and retain the applicable reseller margin.',
   },
   {
     step: '03',
-    title: 'Explore the fit',
+    title: 'Strategic Partnership Model',
     description:
-      'Together we discuss whether there is a practical collaboration path that supports listed companies and strengthens integrated IR delivery.',
-  },
-] as const
-
-export const PARTNER_CREDIBILITY = [
-  {
-    id: 'clients',
-    value: '1,400+',
-    label: 'Clients',
-    detail:
-      'Trusted by listed companies worldwide to deliver data-driven storytelling that builds confidence and strengthens investor communication.',
-  },
-  {
-    id: 'support',
-    value: '24/7',
-    label: 'Support & services',
-    detail:
-      'Every client is supported by a dedicated Account Manager and a 24/7 global service team for continuity and reliable performance.',
-  },
-  {
-    id: 'security',
-    value: 'Bank-grade',
-    label: 'Cybersecurity',
-    detail:
-      'Platforms are built around robust, bank-grade security standards designed to protect data integrity, privacy, and operational resilience.',
-  },
-  {
-    id: 'exchanges',
-    value: '60+',
-    label: 'Stock exchanges',
-    detail:
-      'IR website solutions designed to support disclosure requirements across 60+ stock exchanges and the expectations of institutional investors.',
+      'Individually negotiated commercial terms based on scope, volumes, market opportunity, customer access and joint business plan.',
   },
 ] as const
 
@@ -171,36 +140,46 @@ export const PARTNER_OFFICES =
 
 export const PARTNER_FAQS: FaqItem[] = [
   {
-    id: 'who',
-    question: 'Who can become a partner with Euroland IR?',
+    id: 'reseller',
+    question: 'What is an investor relations software reseller?',
     answer:
-      'Euroland IR works with leading data providers, distribution networks, technology vendors, and stock exchanges to deliver integrated IR solutions for listed companies worldwide. If your organisation fits one of these categories, we welcome your enquiry.',
+      'An IR software reseller buys investor relations software, such as IR websites and IR tools, and resells it to listed companies under agreed commercial terms, keeping a reseller margin.',
   },
   {
-    id: 'how',
-    question: 'How do I start a partnership conversation?',
+    id: 'program',
+    question: 'How does an IR partner program work?',
     answer:
-      'Submit the partnership enquiry form on this page, or email partners@euroland.com. The partnership team will review your message and follow up.',
+      'Partners join through a referral, reseller or strategic partnership model. Each model comes with its own commercial terms, and partners get support from Euroland IR.',
   },
   {
-    id: 'what',
-    question: 'What does Euroland IR provide to listed companies?',
+    id: 'listed-companies',
+    question: 'What do listed companies need from an investor relations platform?',
     answer:
-      'Euroland IR provides tools and services that help listed companies communicate with investors, analyse market information, and deliver relevant company information efficiently — including Share Graph, Interactive Analysis Tool, and AI-powered IR capabilities.',
+      'They need a reliable investor relations website, tools for communicating with investors, and a provider with proven IR expertise and round-the-clock support.',
   },
   {
-    id: 'where',
-    question: 'Where does Euroland IR operate?',
+    id: 'agencies',
+    question: 'How can agencies add IR software to their services?',
     answer:
-      'Euroland IR has offices in London, Dubai, Tokyo, Shanghai, Hong Kong, and Chennai, and supports listed companies across Asia, Europe, and the Middle East.',
+      'Financial communications agencies and IR consultancies can partner with Euroland IR to offer investor relations software alongside their existing services. They can either refer clients or resell the solutions.',
   },
   {
-    id: 'security',
-    question: 'How does Euroland IR approach security?',
+    id: 'reseller-vs-referral',
+    question: 'What is the difference between a reseller and a referral partner?',
     answer:
-      'Security is a key part of Euroland IR platforms and services. Robust security measures are applied across hosting, access, and operations to help protect data and privacy, with bank-grade security standards designed for data integrity and operational resilience.',
+      'A referral partner introduces qualified opportunities and earns a referral fee or commission. A reseller buys and resells the solutions under agreed terms and keeps the reseller margin.',
   },
 ]
+
+export const PARTNER_GROW = {
+  title: "Let's Grow Together",
+  description:
+    'At Euroland IR, we believe successful partnerships are built on shared expertise, trust and long-term growth. Join our international partner network, whether as part of our financial communications agency partner program, our IR consultancy partner programme or our reseller program for investor relations tools, and discover how we can create new opportunities together.',
+  image: '/assets/Professionals_shaking_hands_2K_20261016154222.jpg',
+  imageAlt: 'Business partners shaking hands',
+  primaryCta: { label: 'Become a Partner', href: '#partner-enquiry' },
+  secondaryCta: { label: 'Contact Our Team', href: 'mailto:partners@euroland.com' },
+} as const
 
 export const PARTNER_FINAL_CTA = {
   title: 'Ready to partner with Euroland IR?',

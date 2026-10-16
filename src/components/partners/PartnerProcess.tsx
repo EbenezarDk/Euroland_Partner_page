@@ -9,10 +9,14 @@ export function PartnerProcess() {
     >
       <div className="pc-shell">
         <header className="pc-section__header" data-partner-reveal>
-          <p className="pc-caption">How it works</p>
           <h2 className="pc-heading" id="partner-process-heading">
-            A clear three-step path
+            Partnership Models
           </h2>
+          <p className="pc-body">
+            We offer flexible investor relations software partnership opportunities designed to suit
+            your business, whether you are a financial communications agency, an IR consultancy or a
+            technology provider.
+          </p>
         </header>
 
         <ol className="pc-process__grid">

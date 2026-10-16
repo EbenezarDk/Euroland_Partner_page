@@ -11,6 +11,7 @@ import { PartnerAbout } from '../components/partners/PartnerAbout'
 import { PartnerCategories } from '../components/partners/PartnerCategories'
 import { PartnerCollaborate } from '../components/partners/PartnerCollaborate'
 import { PartnerProcess } from '../components/partners/PartnerProcess'
+import { PartnerGrowTogether } from '../components/partners/PartnerGrowTogether'
 import { PartnerEnquiryForm } from '../components/partners/PartnerEnquiryForm'
 import { PartnerFinalCta } from '../components/partners/PartnerFinalCta'
 import { PARTNER_FAQS, PARTNER_META } from '../data/partnersContent'
@@ -194,8 +195,9 @@ export function PartnersPage() {
       <PartnerCategories />
       <PartnerCollaborate />
       <PartnerProcess />
-      <PartnerEnquiryForm sectionRef={enquiryRef} formRef={enquiryFormRef} />
+      <PartnerGrowTogether />
       <Faq items={PARTNER_FAQS} />
+      <PartnerEnquiryForm sectionRef={enquiryRef} formRef={enquiryFormRef} />
       <PartnerFinalCta />
       <Footer sectionRef={footerRef} />
     </main>

@@ -15,14 +15,13 @@ export function PartnerHero({ sectionRef }: PartnerHeroProps) {
     >
       <div className="pc-hero__media" aria-hidden>
         <img
-          src="/assets/50.png"
+          src="/assets/For%20webite.png"
           alt=""
           width={1920}
           height={1080}
           decoding="async"
           fetchPriority="high"
         />
-        <div className="pc-hero__veil" />
       </div>
 
       <div className="pc-shell pc-hero__content">

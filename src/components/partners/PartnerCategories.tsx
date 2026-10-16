@@ -9,34 +9,23 @@ export function PartnerCategories() {
     >
       <div className="pc-shell">
         <header className="pc-problems__header" data-partner-reveal>
-          <p className="pc-caption pc-caption--on-dark">Partner categories</p>
+          <p className="pc-caption pc-caption--on-dark">Why Partner with Euroland IR?</p>
           <h2 className="pc-heading pc-heading--light" id="partner-categories-heading">
-            Who we partner with
+            Partnering with Euroland IR gives you access to proven IR software and technology,
+            industry expertise and ongoing support to help grow your business.
           </h2>
-          <p className="pc-body pc-body--muted">
-            Euroland IR collaborates with organisations across the IR ecosystem to deliver
-            integrated solutions for listed companies worldwide.
-          </p>
         </header>
 
         <ul className="pc-problems__grid">
-          {PARTNER_CATEGORIES.map((category) => (
-            <li key={category.id} className="pc-problems__card" data-partner-reveal>
-              <article>
-                <div className="pc-problems__media">
-                  <img
-                    src={category.image}
-                    alt={category.imageAlt}
-                    loading="lazy"
-                    width={720}
-                    height={480}
-                  />
-                  <div className="pc-problems__shade" aria-hidden />
-                  <div className="pc-problems__overlay">
-                    <p className="pc-caption pc-caption--on-dark">{category.caption}</p>
-                    <h3 className="pc-problems__title">{category.title}</h3>
-                    <p className="pc-body pc-body--muted">{category.description}</p>
-                  </div>
+          {PARTNER_CATEGORIES.map((item, index) => (
+            <li key={item.id} className="pc-problems__tile" data-partner-reveal>
+              <article className="pc-problems__tile-inner">
+                <span className="pc-problems__num" aria-hidden>
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="pc-problems__tile-body">
+                  <h3 className="pc-problems__title">{item.title}</h3>
+                  <p className="pc-body pc-body--muted">{item.description}</p>
                 </div>
               </article>
             </li>

@@ -1,5 +1,3 @@
-import { PARTNER_CREDIBILITY, PARTNER_OFFICES } from '../../data/partnersContent'
-
 export function PartnerAbout() {
   return (
     <section
@@ -7,36 +5,43 @@ export function PartnerAbout() {
       id="partner-about"
       aria-labelledby="partner-about-heading"
     >
-      <div className="pc-about__watermark" aria-hidden>
-        ABOUT
-      </div>
-
       <div className="pc-shell pc-about__inner">
-        <div className="pc-about__copy" data-partner-reveal>
-          <p className="pc-caption">About Euroland IR</p>
-          <h2 className="pc-heading" id="partner-about-heading">
-            Partnerships that strengthen investor communication
-          </h2>
-          <p className="pc-body">
-            Euroland IR provides investor relations solutions that help listed companies
-            communicate effectively with investors and strengthen investor engagement. We work
-            with leading data providers, distribution networks, technology vendors, and stock
-            exchanges to deliver a complete, integrated IR solution worldwide.
-          </p>
-          <p className="pc-body">
-            With offices in {PARTNER_OFFICES}, we support listed companies across Asia, Europe,
-            and the Middle East — combining best-practice IR with innovative financial technology.
-          </p>
-        </div>
+        <div className="pc-about__layout">
+          <div className="pc-about__media" data-partner-reveal>
+            <img
+              src="/assets/Professionals_shaking_hands_2K_20261016154222.jpg"
+              alt="Business partners shaking hands"
+              width={1200}
+              height={900}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
 
-        <ul className="pc-about__stats" data-partner-reveal>
-          {PARTNER_CREDIBILITY.map((item) => (
-            <li key={item.id} className="pc-about__stat">
-              <p className="pc-about__value">{item.value}</p>
-              <p className="pc-about__label">{item.label}</p>
-            </li>
-          ))}
-        </ul>
+          <div className="pc-about__copy" data-partner-reveal>
+            <p className="pc-caption">
+              Euroland IR Global Partner Network: Investor Relations Partner Program
+            </p>
+            <h2 className="pc-heading" id="partner-about-heading">
+              Connecting Expertise. Creating Value together
+            </h2>
+            <p className="pc-body">
+              Join Euroland IR&apos;s international partner network and expand your offerings with
+              trusted Investor Relations technology and services, including investor relations
+              software for listed companies.
+            </p>
+            <p className="pc-body">
+              By combining your expertise and client relationships with our innovative IR
+              solutions, we can create new business opportunities, strengthen client relationships
+              and deliver greater value to listed companies worldwide, from large caps to small and
+              mid-cap companies across Europe, the Nordics and beyond.
+            </p>
+            <a className="pc-btn pc-btn--light pc-about__cta" href="#partner-enquiry">
+              Become a Partner
+              <span aria-hidden>→</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   )

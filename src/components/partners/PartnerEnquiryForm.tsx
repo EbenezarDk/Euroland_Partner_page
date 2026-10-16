@@ -171,33 +171,46 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
 
   return (
     <section
-      className="pc-section pc-enquiry"
+      className="enquiry"
       id="partner-enquiry"
       ref={sectionRef}
       aria-labelledby="partner-enquiry-heading"
     >
-      <div className="pc-shell pc-enquiry__layout">
-        <header className="pc-enquiry__intro" data-partner-reveal>
+      <img
+        className="enquiry__wave"
+        src="/assets/wave-pattern.svg"
+        alt=""
+        aria-hidden
+      />
+
+      <div className="enquiry__inner">
+        <div className="enquiry__header" data-partner-reveal>
           <p className="pc-caption">Contact</p>
-          <h2 className="pc-heading" id="partner-enquiry-heading">
+          <h2 className="faq__heading" id="partner-enquiry-heading">
             Partnership enquiry
           </h2>
-          <p className="pc-body">
-            Tell us about your organisation. Required fields are marked with an asterisk.
-            You can also email{' '}
+          <p className="pc-body enquiry__subcopy">
+            Tell us about your organisation. Required fields are marked with an asterisk. You can
+            also email{' '}
             <a href={`mailto:${PARTNER_META.contactEmail}`}>{PARTNER_META.contactEmail}</a>.
           </p>
-        </header>
+        </div>
 
         <form
-          className="pc-enquiry__form"
+          className="enquiry__form"
           ref={formRef}
           onSubmit={handleSubmit}
           noValidate
           data-partner-reveal
         >
           <input
-            className="pc-enquiry__honeypot"
+            type="hidden"
+            name="countryCode"
+            value={normalizeDialCode(dialCode) || selected.code}
+          />
+          <input type="hidden" name="countryName" value={selected.name} />
+          <input
+            className="enquiry__honeypot"
             name="companyUrl"
             type="text"
             tabIndex={-1}
@@ -206,8 +219,8 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
             aria-hidden="true"
           />
 
-          <div className="pc-enquiry__fields">
-            <div className="pc-enquiry__row">
+          <div className="enquiry__fields">
+            <div className="enquiry__row">
               <label className="field">
                 <span className="field__label">
                   Name <span className="field__req">*</span>
@@ -240,7 +253,7 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
               </label>
             </div>
 
-            <div className="pc-enquiry__row">
+            <div className="enquiry__row">
               <label className="field">
                 <span className="field__label">
                   Company <span className="field__req">*</span>
@@ -270,14 +283,14 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
               </label>
             </div>
 
-            <div className="pc-enquiry__row">
+            <div className="enquiry__row">
               <fieldset className="field">
                 <legend className="field__label" id={typeId}>
                   Partner category <span className="field__req">*</span>
                 </legend>
-                <div className="pc-enquiry__types" role="group" aria-labelledby={typeId}>
+                <div className="enquiry__types" role="group" aria-labelledby={typeId}>
                   {PARTNER_TYPE_OPTIONS.map((option) => (
-                    <label key={option.id} className="pc-enquiry__type">
+                    <label key={option.id} className="enquiry__type">
                       <input
                         type="radio"
                         name="partnerType"
@@ -332,7 +345,7 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
                   {locationOpen ? (
                     <div className="field__location-menu" id={locationListId}>
                       <div className="field__dial-search">
-                        <label className="sr-only" htmlFor={locationSearchId}>
+                        <label className="visually-hidden" htmlFor={locationSearchId}>
                           Search country
                         </label>
                         <input
@@ -342,6 +355,7 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
                           type="search"
                           value={locationSearch}
                           onChange={(event) => setLocationSearch(event.target.value)}
+                          onMouseDown={(event) => event.stopPropagation()}
                           placeholder="Search country"
                           autoComplete="off"
                         />
@@ -374,7 +388,7 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
               </div>
             </div>
 
-            <div className="pc-enquiry__row">
+            <div className="enquiry__row">
               <fieldset className="field field--phone">
                 <legend className="field__label">
                   Phone number <span className="field__req">*</span>
@@ -436,7 +450,7 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
                     {dialOpen ? (
                       <div className="field__dial-menu" id={listId}>
                         <div className="field__dial-search">
-                          <label className="sr-only" htmlFor={searchId}>
+                          <label className="visually-hidden" htmlFor={searchId}>
                             Search country or code
                           </label>
                           <input
@@ -519,14 +533,14 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
           </div>
 
           {fieldError ? (
-            <p className="pc-enquiry__field-error" role="alert">
+            <p className="enquiry__field-error" role="alert">
               {fieldError}
             </p>
           ) : null}
 
-          <div className="pc-enquiry__actions">
+          <div className="enquiry__actions">
             <button
-              className="pc-btn pc-btn--accent"
+              className="btn btn--primary"
               type="submit"
               disabled={status === 'loading'}
               aria-busy={status === 'loading'}
@@ -541,7 +555,7 @@ export function PartnerEnquiryForm({ sectionRef, formRef }: PartnerEnquiryFormPr
           {status !== 'idle' ? (
             <p
               ref={statusRef}
-              className={`pc-enquiry__status pc-enquiry__status--${status}`}
+              className={`enquiry__status enquiry__status--${status}`}
               role="status"
               tabIndex={-1}
             >

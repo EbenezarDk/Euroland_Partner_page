@@ -36,8 +36,9 @@ export function PartnerChrome({ headerRef, isSolid = false }: PartnerChromeProps
       </a>
 
       <div className="pc-header__actions">
-        <a className="pc-header__cta" href="#partner-enquiry">
-          Get in Touch
+        <a className="pc-btn pc-btn--light" href="#partner-enquiry">
+          Become a Partner
+          <span aria-hidden>→</span>
         </a>
       </div>
     </header>
